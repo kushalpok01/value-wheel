@@ -1,0 +1,33 @@
+### update a user with a given id
+PATCH http://localhost:3000/auth/3
+Content-Type: application/json
+
+{
+    "email": "kushalpok01@gmail.com"
+}
+
+
+
+
+### delete a user with a given id
+DELETE http://localhost:3000/auth/556
+
+
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=kushalpok0@gmail.com
+
+### find a particular user with a given ID
+GET http://localhost:3000/auth/455
+
+
+### create a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+"email": "kushalpok0@gmail.com",
+"password": "asdfghj"
+}
+
+ 
