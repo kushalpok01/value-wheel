@@ -4,8 +4,13 @@ import { map } from 'rxjs/operators';
 import { plainToClass } from "class-transformer";
 import { UserDto } from "src/users/dtos/user.dto";
 
+
+interface ClassConstructor {
+    new(...args: any[]): {};
+}
+
 //making custom decorator
-export function Serialize(dto: any) {
+export function Serialize(dto: ClassConstructor) {
     return UseInterceptors(new SerializeInterceptor(dto));
 }
 
