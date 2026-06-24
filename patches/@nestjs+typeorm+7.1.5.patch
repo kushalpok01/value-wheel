@@ -1,0 +1,13 @@
+diff --git a/node_modules/@nestjs/typeorm/dist/common/typeorm.utils.js b/node_modules/@nestjs/typeorm/dist/common/typeorm.utils.js
+index c133b9f..5de342c 100644
+--- a/node_modules/@nestjs/typeorm/dist/common/typeorm.utils.js
++++ b/node_modules/@nestjs/typeorm/dist/common/typeorm.utils.js
+@@ -9,7 +9,7 @@ const circular_dependency_exception_1 = require("../exceptions/circular-dependen
+ const typeorm_constants_1 = require("../typeorm.constants");
+ const logger = new common_1.Logger('TypeOrmModule');
+ function getRepositoryToken(entity, connection = typeorm_constants_1.DEFAULT_CONNECTION_NAME) {
+-    if (util_1.isNullOrUndefined(entity)) {
++   if (entity === null || entity === undefined) {
+         throw new circular_dependency_exception_1.CircularDependencyException('@InjectRepository()');
+     }
+     const connectionPrefix = getConnectionPrefix(connection);
