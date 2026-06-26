@@ -6,6 +6,9 @@
 #db
 *.sqlite
 
+#apiclient
+.http
+
 # Logs
 logs
 *.log
