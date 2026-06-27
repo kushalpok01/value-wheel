@@ -16,6 +16,14 @@ export class ReportsController {
     constructor(private reportsService: ReportsService) { }
 
 
+
+    @Get()
+    getEstimate(@Query() query: GetEstimateDto) {
+        return this.reportsService.createEstimate(query);
+    }
+
+
+
     @Post()
     @UseGuards(AuthGuard)
     @Serialize(ReportDto)
@@ -31,11 +39,9 @@ export class ReportsController {
         return this.reportsService.changeApproval(id, body.approved);
     }
 
-    @Get()
-    getEstimate(@Query() query: GetEstimateDto) {
-        console.log(query)
 
-    }
+
+
 
 
 
