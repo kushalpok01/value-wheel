@@ -33,6 +33,7 @@ switch (process.env.NODE_ENV) {
                 rejectUnauthorized: false,
             },
             entities: ['**/*.entity.js'],
+            synchronize: true,
         });
         break;
     default:
